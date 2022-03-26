@@ -1,3 +1,22 @@
+/*Mike Hedges personal portfolio website
+3/26/2022*/
+
+*{
+	box-sizing: border-box;
+}
+
+
+/*--IDs--*/
+#container {
+	background-color: #ddfad3;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	box-shadow: 3px 3px 3px #000000;
+	border: 1px solid #000000;
+}
+
+
 /*--Smartphone Display--*/
 @media only screen and (max-width: 37.5em) {
 //reminder:  add rulesets in between the curly braces
