@@ -1,0 +1,75 @@
+/*Mike Hedges personal portfolio website
+3/26/2022*/
+
+/*
+Title of Page: Mike Hedges' Portfolio
+Description: A website to showcase my frontend skills
+Author: Mike Hedges
+Author Email: mike.hedges821@gmail.com
+*/
+
+*{
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #5a9146;
+	background-image: linear-gradient(to bottom, #ffffff, #5a9146);
+	background-repeat: no-repeat;
+	font-family: "Times New Roman", serif;
+}
+
+header {
+	background-size: 50%;
+	background-color: #2319C7;
+	padding: 1px 4%;
+}
+
+h1 {
+	color: white;
+	text-shadow: 1px 1px 3px #000;
+	font-size: 3em;
+}
+
+footer {
+	text-align: center;
+	font-size: small;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	border: 3px groove #AAD799;
+	border-radius: 7px;
+}
+
+/*--IDs--*/
+#container {
+	text-align: center;
+	background-color: #ddfad3;
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+	box-shadow: 3px 3px 3px #000000;
+	border: 1px solid #000000;
+}
+
+
+/*--Smartphone Display--*/
+@media only screen and (max-width: 37.5em) {
+	//reminder: add rulesets in between the curly braces
+#container {
+	width: auto;
+}
+
+	
+/*Media queries require a closing brace*/	
+}
+
+/*--Tablet Display--*/
+@media only screen and (max-width: 64em) {
+
+	#container {
+		width: auto;
+	}
+
+	/*Media queries require a closing brace*/
+}
