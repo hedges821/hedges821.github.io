@@ -58,15 +58,11 @@ footer a{
 	text-decoration: none;
 }
 
-nav {
-	padding-top: 10%;
-	position: fixed;
-	z-index: 9;
-	width: 84%;
-	top: 0;
+nav{
+	padding: .25% 0;
 }
 
-nav ul {		
+nav ul {
 	list-style-type: none;
 	text-align: center;
 	font-size: 1.5em;
@@ -87,9 +83,9 @@ nav a {
 	border-right: 1px solid #091d02;
 }
 
-nav a:hover{
-	color: aqua;
-}
+	nav a:hover {
+		color: aqua;
+	}
 
 
 
@@ -136,7 +132,8 @@ footer a:hover{
 
 /*--Smartphone Display--*/
 @media only screen and (max-width: 37.5em) {
-	//reminder: add rulesets in between the curly braces #container {
+	//reminder: add rulesets in between the curly braces 
+	#container {
 		margin: 0 auto;
 		width: auto;
 		background-color: #fff;
@@ -144,7 +141,7 @@ footer a:hover{
 	}
 
 	.top {
-		padding-top: 25%;
+		padding-top: 45%;
 	}
 
 	body {
@@ -166,6 +163,20 @@ footer a:hover{
 		height: 50%;
 	}
 
+	nav a {
+		display: block;
+		border: none;
+		border-bottom: 2px solid #000;
+	}
+
+	nav li {
+		display: block;
+	}
+
+	nav ul {
+		text-align: center;
+	}
+
 	
 /*Media queries require a closing brace*/	
 }
@@ -180,7 +191,7 @@ footer a:hover{
 	}
 
 	.top {
-		padding-top: 25%;
+		padding-top: 45%;
 	}
 
 	body {
@@ -195,6 +206,25 @@ footer a:hover{
 	main {
 		width: 100%;
 		
+	}
+
+	nav, nav ul, nav li {
+		margin-top: 1px;
+		margin-bottom: 5px;
+	}
+
+	nav a {
+		display: block;
+		border: none;
+		border-bottom: 2px solid #000;
+	}
+
+	nav li {
+		display: block;
+	}
+
+	nav ul {
+		text-align: center;
 	}
 
 	/*Media queries require a closing brace*/
