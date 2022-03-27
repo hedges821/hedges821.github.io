@@ -22,7 +22,7 @@ body {
 header {
 	background-size: 50%;
 	background-color: #2319C7;
-	padding: 1px 4%;
+	padding: 1px 2%;
 	position: fixed;
 	z-index: 10;
 	width: 84%;
@@ -37,7 +37,6 @@ h1 {
 
 p{
 	text-align: center;
-	position: relative;
 	padding: 0 25%;
 }
 
@@ -113,6 +112,7 @@ nav a:hover{
 	color: #fff;
 	font-size: 125%;
 	margin-top: -2%;
+	margin-left: -25%;
 }
 
 .pHeader a:link{
@@ -130,7 +130,6 @@ footer a:hover{
 
 .navContainer{
 	background-color: darkblue;
-
 }
 
 
