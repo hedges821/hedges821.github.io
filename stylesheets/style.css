@@ -46,6 +46,8 @@ figure{
 	margin-bottom: 10%;
 }
 
+
+
 footer {
 	text-align: center;
 	font-size: small;
@@ -56,6 +58,10 @@ footer {
 
 footer a{
 	text-decoration: none;
+}
+
+footer a:hover {
+	color: aqua;
 }
 
 nav{
@@ -83,9 +89,10 @@ nav a {
 	border-right: 1px solid #091d02;
 }
 
-	nav a:hover {
-		color: aqua;
-	}
+nav a:hover {
+	color: darkblue;
+	background-color: #fff;
+}
 
 
 
@@ -103,12 +110,13 @@ nav a {
 	padding-top: 20%;
 }
 
-.pHeader{
+.pHeader {
 	text-align: left;
 	color: #fff;
 	font-size: 125%;
 	margin-top: -2%;
 	margin-left: -25%;
+	text-shadow: 1px 1px 3px #000;
 }
 
 .pHeader a:link{
@@ -120,14 +128,20 @@ nav a {
 	color: #ffd800;
 }
 
-footer a:hover{
-	color: aqua;
-}
+
 
 .navContainer{
 	background-color: darkblue;
 }
 
+.center{
+	text-align: center;
+}
+
+.videoClass{
+	width: 640px;
+	height: 480px;
+}
 
 
 /*--Smartphone Display--*/
