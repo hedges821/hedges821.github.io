@@ -23,42 +23,148 @@ header {
 	background-size: 50%;
 	background-color: #2319C7;
 	padding: 1px 4%;
+	position: fixed;
+	z-index: 10;
+	width: 84%;
+	top: 0;
 }
 
 h1 {
 	color: white;
 	text-shadow: 1px 1px 3px #000;
-	font-size: 3em;
+	font-size: 275%;
+}
+
+p{
+	text-align: center;
+	position: relative;
+}
+
+figure{
+	text-align: center;
+	position: relative;
+	margin-bottom: 10%;
 }
 
 footer {
 	text-align: center;
 	font-size: small;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	padding-bottom: 10px;
+	padding: 10px 0;
 	border: 3px groove #AAD799;
 	border-radius: 7px;
 }
 
+footer a{
+	text-decoration: none;
+}
+
+nav {
+	padding-top: 10%;
+	position: fixed;
+	z-index: 9;
+	width: 84%;
+	top: 0;
+}
+
+nav ul {		
+	list-style-type: none;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 10px;
+	padding: 5px;
+}
+
+nav li {
+	display: inline;
+}
+
+nav a {
+	color: #fff;
+	text-decoration: none;
+	padding: 10px;
+	font-weight: bold;
+	border-left: 1px solid #091d02;
+	border-right: 1px solid #091d02;
+}
+
+nav a:hover{
+	color: aqua;
+}
+
+
+
+
 /*--IDs--*/
 #container {
-	text-align: center;
 	background-color: #ddfad3;
-	margin-left: auto;
-	margin-right: auto;
 	width: 85%;
-	box-shadow: 3px 3px 3px #000000;
-	border: 1px solid #000000;
+	margin: 0 auto;
 }
+
+
+/*--Classes--*/
+.top{
+	padding-top: 20%;
+}
+
+.pHeader{
+	text-align: left;
+	color: #fff;
+	font-size: 125%;
+	margin-top: -2%;
+}
+
+.pHeader a:link{
+	color: #fff;
+	text-decoration: none;
+}
+
+.pHeader a:hover{
+	color: #ffd800;
+}
+
+footer a:hover{
+	color: aqua;
+}
+
+.navContainer{
+	background-color: darkblue;
+
+}
+
 
 
 /*--Smartphone Display--*/
 @media only screen and (max-width: 37.5em) {
-	//reminder: add rulesets in between the curly braces
-#container {
-	width: auto;
-}
+	//reminder: add rulesets in between the curly braces #container {
+		margin: 0 auto;
+		width: auto;
+		background-color: #fff;
+		
+	}
+
+	.top {
+		padding-top: 25%;
+	}
+
+	body {
+		background-color: #fff;
+		background-image: none;
+		padding-top: 10%;
+	}
+
+	header {
+		width: 100%;
+	}
+
+	main {
+		width: 100%;
+	}
+
+	img{
+		width: 50%;
+		height: 50%;
+	}
 
 	
 /*Media queries require a closing brace*/	
@@ -68,7 +174,27 @@ footer {
 @media only screen and (max-width: 64em) {
 
 	#container {
+		margin: 0 auto;
 		width: auto;
+		background-color: #fff;
+	}
+
+	.top {
+		padding-top: 25%;
+	}
+
+	body {
+		background-color: #fff;
+		background-image: none;
+	}
+
+	header{
+		width: 100%;
+	}
+
+	main {
+		width: 100%;
+		
 	}
 
 	/*Media queries require a closing brace*/
