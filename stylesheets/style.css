@@ -104,6 +104,19 @@ nav a:hover {
 	margin: 0 auto;
 }
 
+#testPattern {
+	background-image: url(../images/test_pattern.jpg);
+	background-repeat: no-repeat;
+	background-size: 50%;
+	background-position: center;
+	width: 600px;
+	height: 200px;
+	float: left;
+	position: relative;
+	top: -10px;
+	left: 40px;
+}
+
 
 /*--Classes--*/
 .top{
