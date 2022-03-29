@@ -191,6 +191,10 @@ nav a:hover {
 		text-align: center;
 	}
 
+	.top {
+		padding-top: 30%;
+	}
+
 	
 /*Media queries require a closing brace*/	
 }
@@ -239,6 +243,10 @@ nav a:hover {
 
 	nav ul {
 		text-align: center;
+	}
+
+	.top {
+		padding-top: 30%;
 	}
 
 	/*Media queries require a closing brace*/
