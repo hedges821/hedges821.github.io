@@ -154,6 +154,13 @@ nav a:hover {
 		
 	}
 
+	header {
+		position: relative;
+		z-index: 0;
+		width: 84%;
+		top: 0;
+	}
+
 	.top {
 		padding-top: 45%;
 	}
@@ -191,9 +198,7 @@ nav a:hover {
 		text-align: center;
 	}
 
-	.top {
-		padding-top: 30%;
-	}
+
 
 	
 /*Media queries require a closing brace*/	
@@ -206,6 +211,13 @@ nav a:hover {
 		margin: 0 auto;
 		width: auto;
 		background-color: #fff;
+	}
+
+	header {
+		position: relative;
+		z-index: 0;
+		width: 84%;
+		top: 0;
 	}
 
 	.top {
@@ -245,9 +257,7 @@ nav a:hover {
 		text-align: center;
 	}
 
-	.top {
-		padding-top: 30%;
-	}
+
 
 	/*Media queries require a closing brace*/
 }
