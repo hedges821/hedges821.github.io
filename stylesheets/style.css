@@ -36,7 +36,6 @@ h1 {
 }
 
 p{
-	text-align: center;
 	padding: 0 25%;
 }
 
@@ -102,8 +101,6 @@ nav a:hover {
 	width: 85%;
 	margin: 0 auto;
 }
-
-
 
 /*--Classes--*/
 .top{
