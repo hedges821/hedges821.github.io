@@ -125,9 +125,13 @@ nav a:hover {
 	color: #ffd800;
 }
 
+.divJust{
+	padding-left: 25%;
+}
 
 
-.navContainer{
+
+.navContainer {
 	background-color: darkblue;
 }
 
