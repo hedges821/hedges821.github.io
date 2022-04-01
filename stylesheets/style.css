@@ -8,14 +8,18 @@ Author: Mike Hedges
 Author Email: mike.hedges821@gmail.com
 */
 
+
 *{
 	box-sizing: border-box;
 }
 
+@font-face{
+	font-family: Space_Mono;
+	src: url(../fonts/Space_Mono)
+}
+
+
 body {
-	background-color: #5a9146;
-	background-image: linear-gradient(to bottom, #ffffff, #5a9146);
-	background-repeat: no-repeat;
 	font-family: "Times New Roman", serif;
 }
 
@@ -37,6 +41,7 @@ h1 {
 
 p{
 	padding: 0 25%;
+	font-family: 'Space_Mono', monospace;
 }
 
 figure{
