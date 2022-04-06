@@ -69,6 +69,7 @@ footer a:hover {
 
 nav{
 	padding: .25% 0;
+	clear: both;
 }
 
 nav ul {
@@ -135,7 +136,6 @@ nav a:hover {
 }
 
 
-
 .navContainer {
 	background-color: darkblue;
 }
@@ -150,11 +150,15 @@ nav a:hover {
 	width: 50%;
 }
 
+.moreInfo{
+	padding-bottom: 5%;
+
+}
+
 
 /*--Smartphone Display--*/
 @media only screen and (max-width: 37.5em) {
-	//reminder: add rulesets in between the curly braces 
-	#container {
+	//reminder: add rulesets in between the curly braces #container {
 		margin: 0 auto;
 		width: auto;
 		background-color: #fff;
