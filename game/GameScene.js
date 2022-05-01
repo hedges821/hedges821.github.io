@@ -12,7 +12,7 @@ class GameScene extends Phaser.Scene {
 
 	create() {
 
-		gameState.player = this.physics.add.sprite(220, 400, 'hero').setScale(.5);
+		gameState.player = this.physics.add.sprite(220, 400, 'hero').setScale(.25);
 		gameState.player.setCollideWorldBounds(true);
 
 		//gameState.player = this.physics.add.sprite(225, 450, 'codey').setScale(.5);	
