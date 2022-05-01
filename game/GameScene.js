@@ -17,7 +17,7 @@ class GameScene extends Phaser.Scene {
 		gameState.player.setCollideWorldBounds(true);
 		gameState.cursors = this.input.keyboard.createCursorKeys();		
 		
-		gameState.player2 = this.physics.add.sprite(220, 400, 'hero');
+		gameState.player2 = this.physics.add.sprite(220, 400, 'hero').setScale(.5);
 		gameState.player2.setCollideWorldBounds(true);
 	}
 
