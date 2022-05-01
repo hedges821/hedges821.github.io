@@ -12,13 +12,13 @@ class GameScene extends Phaser.Scene {
 
 	create() {
 		
-		gameState.player = this.physics.add.sprite(225, 450, 'codey').setScale(.5);	
+		//gameState.player = this.physics.add.sprite(225, 450, 'codey').setScale(.5);	
 		gameState.scoreText = this.add.text(195, 485, 'Score: 0', { fontSize: '15px', fill: '#000000' });
 		gameState.player.setCollideWorldBounds(true);
 		gameState.cursors = this.input.keyboard.createCursorKeys();		
 		
-		gameState.player2 = this.physics.add.sprite(220, 400, 'hero').setScale(.5);
-		gameState.player2.setCollideWorldBounds(true);
+		gameState.player = this.physics.add.sprite(220, 400, 'hero').setScale(.5);
+		gameState.player.setCollideWorldBounds(true);
 	}
 
 	update() {
