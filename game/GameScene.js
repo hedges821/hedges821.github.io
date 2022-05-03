@@ -5,7 +5,7 @@ class GameScene extends Phaser.Scene {
 
 	preload() {
 		
-		this.load.image('codey', 'https://content.codecademy.com/courses/learn-phaser/physics/codey.png');
+		//this.load.image('codey', 'https://content.codecademy.com/courses/learn-phaser/physics/codey.png');
 		this.load.image('hero', 'gfx/hero.png');
 	}
 
