@@ -4,21 +4,34 @@ class GameScene extends Phaser.Scene {
 	}
 
 	preload() {
-		
-		//this.load.image('codey', 'https://content.codecademy.com/courses/learn-phaser/physics/codey.png');
 		this.load.image('hero', 'gfx/hero.png');
+		this.load.image('bkgd', 'gfx/bkgd.png');
 	}
 
 
 	create() {
+		gameState.active = true;	
+		
+		gameState.bkgd = this.add.image(0, 0, 'bkgd').setOrigin(0, 0);	
 
-		gameState.player = this.physics.add.sprite(220, 400, 'hero').setScale(.15);
+		gameState.player = this.physics.add.sprite(20, 20, 'hero').setScale(.15);
+		
+		gameState.player.setCollideWorldBounds(true);
+	
+		this.cameras.main.setBounds(0, 0, gameState.bkgd.width, 
+			gameState.bkgd.height);
+		this.physics.world.setBounds(0, 0, gameState.width,
+			 gameState.bkgd.height);
+
+		this.cameras.main.startFollow(gameState.player, true, 0.5, 0.5)
 		gameState.player.setCollideWorldBounds(true);
 
-		//gameState.player = this.physics.add.sprite(225, 450, 'codey').setScale(.5);	
-		//gameState.player.setCollideWorldBounds(true);
-		gameState.scoreText = this.add.text(195, 485, 'Score: 0', { fontSize: '15px', fill: '#000000' });
+		
+
+		
 		gameState.cursors = this.input.keyboard.createCursorKeys();		
+		
+		
 		
 		
 	}
