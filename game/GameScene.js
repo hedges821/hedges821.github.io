@@ -30,7 +30,7 @@ class GameScene extends Phaser.Scene {
 			 gameState.bkgd.height);
 
 		this.cameras.main.startFollow(gameState.player, true, 0.5, 0.5)
-		gameState.player.setCollideWorldBounds(true);
+		//gameState.player.setCollideWorldBounds(true);
 
 		
 		gameState.cursors = this.input.keyboard.createCursorKeys();		
