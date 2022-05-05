@@ -25,6 +25,13 @@ class GameScene extends Phaser.Scene {
   			frameRate: 5,
   			repeat: -1
 			});
+
+		this.anims.create({
+			key: 'idle',
+			frames: this.anims.generateFrameNumbers('hero', { start: 0, end: 0}),
+			frameRate: 5,
+			repeat: -1
+		  	});
 		
 		gameState.player.setCollideWorldBounds(true);
 	
@@ -52,28 +59,27 @@ class GameScene extends Phaser.Scene {
 	}
 
 	update() {
-		if (gameState.cursors.left.isDown) {
-			gameState.player.setVelocityX(-160);
-			gameState.player.anims.play('run', true);
-			gameState.player.flipX = false;
-		} else if (gameState.cursors.right.isDown) {
-			gameState.player.setVelocityX(160);
-			gameState.player.anims.play('run', true);
-			gameState.player.flipX = true;
-		} else {
-			gameState.player.setVelocityX(0);
-		}
-		
-		if (gameState.cursors.up.isDown) {
-			gameState.player.setVelocityY(-160);
-			gameState.player.anims.play('run', true);
-			
-		} else if (gameState.cursors.down.isDown) {
-			gameState.player.setVelocityY(160);
-			gameState.player.anims.play('run', true);
-		} else {
-			gameState.player.setVelocityY(0);
-		}
+		if(gameState.active){
+			if (gameState.cursors.left.isDown) {
+				gameState.player.setVelocityX(-160);
+				gameState.player.anims.play('run', true);
+				gameState.player.flipX = false;
+			} else if (gameState.cursors.right.isDown) {
+				gameState.player.setVelocityX(160);
+				gameState.player.anims.play('run', true);
+				gameState.player.flipX = true;
 
+			} else if (gameState.cursors.up.isDown) {
+				gameState.player.setVelocityY(-160);
+				gameState.player.anims.play('run', true);
+			} else if (gameState.cursors.down.isDown) {
+				gameState.player.setVelocityY(160);
+				gameState.player.anims.play('run', true);
+			} else {
+				gameState.player.setVelocityY(0);
+				gameState.player.setVelocityX(0);
+				gameState.player.anims.play('idle', true);
+			}
+		}
 	}
 }
