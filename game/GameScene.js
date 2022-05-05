@@ -6,6 +6,9 @@ class GameScene extends Phaser.Scene {
 	preload() {
 		this.load.spritesheet('hero', 'gfx/heroSprite.png', {frameWidth: 302, frameHeight: 455});
 		this.load.image('bkgd', 'gfx/bkgd.png');
+
+		//enemy
+		this.load.spritesheet('enemy1', 'gfx/enemy1.png', {frameWidth: 200, frameHeight: 250});
 	}
 
 
@@ -13,7 +16,8 @@ class GameScene extends Phaser.Scene {
 		gameState.active = true;	
 		
 		gameState.bkgd = this.add.image(0, 0, 'bkgd').setOrigin(0, 0);	
-
+		
+		//player
 		gameState.player = this.physics.add.sprite(20, 20, 'hero').setScale(.15);
 		this.anims.create({
   			key: 'run',
@@ -30,7 +34,15 @@ class GameScene extends Phaser.Scene {
 			 gameState.bkgd.height);
 
 		this.cameras.main.startFollow(gameState.player, true, 0.5, 0.5)
-		//gameState.player.setCollideWorldBounds(true);
+		
+		//enemy
+		gameState.enemy1 = this.physics.add.sprite(150, 150, 'enemy1').setScale(.3);
+		this.anims.create({
+			key: 'move',
+			frames: this.anims.generateFrameNumbers('enemy1', {start: 0, end: 2}),
+			frameRate: 5,
+			repeat: -1
+		});
 
 		
 		gameState.cursors = this.input.keyboard.createCursorKeys();		
