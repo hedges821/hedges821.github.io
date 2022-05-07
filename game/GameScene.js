@@ -9,6 +9,7 @@ class GameScene extends Phaser.Scene {
 
 		//enemy
 		this.load.spritesheet('enemy1', 'gfx/enemy1.png', {frameWidth: 200, frameHeight: 250});
+		this.load.spritesheet('enemy2', 'gfx/enemy2.png', {frameWidth: 250, frameHeight: 250});
 	}
 
 
@@ -42,20 +43,48 @@ class GameScene extends Phaser.Scene {
 
 		this.cameras.main.startFollow(gameState.player, true, 0.5, 0.5)
 		
-		//enemy
-		gameState.enemy1 = this.physics.add.sprite(150, 150, 'enemy1').setScale(.3);
+		//purple enemy guy
+		gameState.enemy1 = this.physics.add.sprite(148, 147, 'enemy1').setScale(.3);
 		this.anims.create({
 			key: 'move',
-			frames: this.anims.generateFrameNumbers('enemy1', {start: 0, end: 2}),
+			frames: this.anims.generateFrameNumbers('enemy1', {start: 0, end: 4}),
 			frameRate: 5,
 			repeat: -1
 		});
 
+		gameState.enemy1.move = this.tweens.add({
+			targets: gameState.enemy1,
+			x: 320,
+			ease: 'Back',
+			duration: 1800,
+			repeat: -1,
+			yoyo: true,
+			//onRepeat: growSnowman
+		  });
+
+		  //red enemy guy
+		  gameState.enemy2 = this.physics.add.sprite(180, 180, 'enemy2').setScale(.3);
+		  this.anims.create({
+			  key: 'cycle',
+			  frames: this.anims.generateFrameNumbers('enemy2', {start: 0, end: 3}),
+			  frameRate: 5,
+			  repeat: -1
+		  });
+  
+		  gameState.enemy2.move = this.tweens.add({
+			  targets: gameState.enemy2,
+			  x: 320,
+			  ease: 'BackN',
+			  duration: 1800,
+			  repeat: -1,
+			  yoyo: true,
+			  //onRepeat: growSnowman
+			});
+		
+		gameState.enemy1.anims.play('move', true);
+		gameState.enemy2.anims.play('cycle', true);
 		
 		gameState.cursors = this.input.keyboard.createCursorKeys();		
-		
-		
-		
 	}
 
 	update() {
