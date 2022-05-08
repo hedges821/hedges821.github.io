@@ -25,23 +25,24 @@ class GameScene extends Phaser.Scene {
   			frames: this.anims.generateFrameNumbers('hero', { start: 0, end: 2 }),
   			frameRate: 5,
   			repeat: -1
-			});
+		});
 
 		this.anims.create({
 			key: 'idle',
 			frames: this.anims.generateFrameNumbers('hero', { start: 0, end: 0}),
 			frameRate: 5,
 			repeat: -1
-		  	});
+		});
 		
 		gameState.player.setCollideWorldBounds(true);
 	
 		this.cameras.main.setBounds(0, 0, gameState.bkgd.width, 
 			gameState.bkgd.height);
 		this.physics.world.setBounds(0, 0, gameState.bkgd.width,
-			 gameState.bkgd.height);
+			gameState.bkgd.height);
 
 		this.cameras.main.startFollow(gameState.player, true, 0.5, 0.5)
+		gameState.cursors = this.input.keyboard.createCursorKeys();	
 		
 		//purple enemy guy
 		gameState.enemy1 = this.physics.add.sprite(148, 147, 'enemy1').setScale(.3);
@@ -60,31 +61,41 @@ class GameScene extends Phaser.Scene {
 			repeat: -1,
 			yoyo: true,
 			//onRepeat: growSnowman
-		  });
+		});
 
 		  //red enemy guy
-		  gameState.enemy2 = this.physics.add.sprite(180, 180, 'enemy2').setScale(.3);
-		  this.anims.create({
-			  key: 'cycle',
-			  frames: this.anims.generateFrameNumbers('enemy2', {start: 0, end: 3}),
-			  frameRate: 5,
-			  repeat: -1
-		  });
+		gameState.enemy2 = this.physics.add.sprite(280, 480, 'enemy2').setScale(.3);
+		this.anims.create({
+		    key: 'cycle',
+		    frames: this.anims.generateFrameNumbers('enemy2', {start: 0, end: 3}),
+		    frameRate: 5,
+		    repeat: -1
+		});
   
-		  gameState.enemy2.move = this.tweens.add({
-			  targets: gameState.enemy2,
-			  x: 320,
-			  ease: 'Back',
-			  duration: 1800,
-			  repeat: -1,
-			  yoyo: true,
-			  //onRepeat: growSnowman
-			});
+		gameState.enemy2.move = this.tweens.add({
+		    targets: gameState.enemy2,
+		    x: 420,
+		    ease: 'Linear',
+		    duration: 1800,
+		    repeat: -1,
+		    yoyo: true,
+		    //onRepeat: growSnowman
+		});
 		
 		gameState.enemy1.anims.play('move', true);
 		gameState.enemy2.anims.play('cycle', true);
+
+		//Overlap
 		
-		gameState.cursors = this.input.keyboard.createCursorKeys();		
+		this.physics.add.overlap(gameState.player, gameState.enemy1, () => {
+			this.cameras.main.shake(240, .01, false, function(camera, progress) {
+				if (progress > .5) {
+				this.scene.restart(this.levelKey);
+				}
+			  });
+		  });
+		
+			
 	}
 
 	update() {
