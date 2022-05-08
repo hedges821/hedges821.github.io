@@ -74,7 +74,7 @@ class GameScene extends Phaser.Scene {
 		  gameState.enemy2.move = this.tweens.add({
 			  targets: gameState.enemy2,
 			  x: 320,
-			  ease: 'BackN',
+			  ease: 'Back',
 			  duration: 1800,
 			  repeat: -1,
 			  yoyo: true,
