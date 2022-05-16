@@ -65,9 +65,9 @@ class GameScene extends Phaser.Scene {
 			duration: 1800,
 			repeat: -1,
 			yoyo: true,
-		});
+		}); 
 
-	
+		
 
 		  //red enemy guy
 		gameState.enemy2 = this.physics.add.sprite(280, 480, 'enemy2').setScale(.3);
@@ -86,7 +86,7 @@ class GameScene extends Phaser.Scene {
 		    repeat: -1,
 		    yoyo: true,
 		    //onRepeat: growSnowman
-		});
+		}); 
 		
 		gameState.enemy1.anims.play('move', true);
 		gameState.enemy2.anims.play('cycle', true);
@@ -101,7 +101,6 @@ class GameScene extends Phaser.Scene {
 			  });
 		  });
 		
-			
 	}
 	
 
@@ -128,5 +127,7 @@ class GameScene extends Phaser.Scene {
 				gameState.player.anims.play('idle', true);
 			}
 		}
+
+		gameState.enemy1.enemyFollows;
 	}
 }
