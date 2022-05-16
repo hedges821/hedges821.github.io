@@ -24,11 +24,11 @@ body {
 }
 
 header {
-	background-size: 50%;
+	//background-size: 50%;
 	background-color: #2319C7;
 	padding: 1px 2%;
 	z-index: 10;
-	width: 84%;
+	width: 100%;
 	top: 0;
 }
 
@@ -147,7 +147,12 @@ nav a:hover {
 
 .moreInfo{
 	padding-bottom: 5%;
+}
 
+canvas {
+	display: block;
+	margin: .5% auto;
+	border: 3px green solid;
 }
 
 

@@ -4,6 +4,7 @@ class GameScene extends Phaser.Scene {
 	}
 
 	preload() {
+
 		this.load.spritesheet('hero', 'gfx/heroSprite.png', {frameWidth: 302, frameHeight: 455});
 		this.load.image('bkgd', 'gfx/bkgd.png');
 
