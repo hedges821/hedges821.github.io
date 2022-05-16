@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8" />
     <title>My Game</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, intitial-scale=1.0">
+
+    <link rel="icon" href="../images/favicon.png" type="image/x-icon">
+
+    <link rel="stylesheet" href="../stylesheets/style.css" media="screen">
+
     <style>
-      canvas {
-        width: 640px;
-      }
+        canvas {
+            width: 640px;
+        }
     </style>
-    
+
 </head>
 <body>
     <header>
@@ -17,7 +24,7 @@
 
         <nav class="navContainer">
             <ul>
-                <li><a href="../../index.html">Home</a></li>
+                <li><a href="./../index.html">Home</a></li>
                 <li><a href="../pages/careerGoals.html">Future Career Goals</a></li>
                 <li><a href="../pages/tvCareer.html">Career in TV</a></li>
                 <li><a href="gameIndex.html">Game</a></li>
@@ -25,10 +32,12 @@
             </ul>
         </nav>
     </header>
-    <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
+    <div class="centerGame">
+        <script src="https://cdn.jsdelivr.net/npm/phaser@3.16.2/dist/phaser.min.js"></script>
 
-    <script src="StartScene.js"></script>
-    <script src="GameScene.js"></script>
-    <script src="game.js"></script>
+        <script src="StartScene.js"></script>
+        <script src="GameScene.js"></script>
+        <script src="game.js"></script>
+    </div>
 </body>
 </html>
