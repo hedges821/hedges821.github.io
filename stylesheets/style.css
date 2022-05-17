@@ -24,7 +24,6 @@ body {
 }
 
 header {
-	//background-size: 50%;
 	background-color: #2319C7;
 	padding: 1px 2%;
 	z-index: 10;
@@ -114,7 +113,7 @@ nav a:hover {
 
 /*--IDs--*/
 #container {
-	background-color: #ddfad3;
+	//background-color: #ddfad3;
 	width: 85%;
 	margin: 0 auto;
 }
