@@ -52,6 +52,7 @@ p{
 	padding: 0 15%;
 	font-family: 'Space_Mono', monospace;
 	font-size: 18px;
+	text-indent: 50px;
 }
 
 ul{
@@ -81,6 +82,14 @@ footer a:hover {
 	color: aqua;
 }
 
+footer a:active{
+	color: yellow;
+}
+
+footer a:visited{
+	color: green;
+}
+
 nav{
 	padding: .25% 0;
 	clear: both;
@@ -92,6 +101,26 @@ nav ul {
 	font-size: 1.5em;
 	margin: 10px;
 	padding: 5px;
+}
+
+
+p a:hover, .contactInfo li a:hover, .resumeLink a:hover {
+	color: cadetblue;
+}
+
+p a:active, .contactInfo li a:active, .resumeLink a:active{
+	color: yellow;
+}
+
+iframe{
+	display: inline-flex;
+	margin: 0 auto;
+}
+
+canvas {
+	display: block;
+	margin: .5% auto;
+	border: 3px green solid;
 }
 
 nav li {
@@ -111,12 +140,6 @@ nav a:hover {
 	color: darkblue;
 	background-color: #fff;
 }
-
-iframe{
-	display: inline-flex;
-	margin: 0 auto;
-}
-
 
 
 
@@ -184,11 +207,10 @@ iframe{
 	padding-bottom: 5%;
 }
 
-canvas {
-	display: block;
-	margin: .5% auto;
-	border: 3px green solid;
+.resumeLink a{
+	color: white;
 }
+
 
 
 /*--Smartphone Display--*/
@@ -196,8 +218,7 @@ canvas {
 	//reminder: add rulesets in between the curly braces #container {
 		margin: 0 auto;
 		width: auto;
-		background-color: #fff;
-		
+		background-color: #fff;		
 	}
 
 	.top {
@@ -246,6 +267,9 @@ canvas {
 		text-align: center;
 	}
 
+	iframe {
+		display: none;
+	}
 
 
 	
@@ -306,7 +330,9 @@ canvas {
 		text-align: center;
 	}
 
-
+	iframe {
+		display: none;
+	}
 
 	/*Media queries require a closing brace*/
 }
