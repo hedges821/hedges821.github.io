@@ -17,10 +17,14 @@ class GameScene extends Phaser.Scene {
 	create() {
 		gameState.active = true;	
 		
-		gameState.bkgd = this.add.image(0, 0, 'bkgd').setOrigin(0, 0);	
+		gameState.bkgd = this.add.image(0, 0, 'bkgd').setOrigin(0, 0);
+		
+		gameState.r1 = this.add.rectangle(150, 50, 10, 1000, 0x6666ff);
 		
 		//player
 		gameState.player = this.physics.add.sprite(20, 20, 'hero').setScale(.15);
+
+		//player movement
 		this.anims.create({
   			key: 'run',
   			frames: this.anims.generateFrameNumbers('hero', { start: 0, end: 2 }),
@@ -34,6 +38,7 @@ class GameScene extends Phaser.Scene {
 			frameRate: 5,
 			repeat: -1
 		});
+			
 		
 		gameState.player.setCollideWorldBounds(true);
 	
@@ -62,13 +67,14 @@ class GameScene extends Phaser.Scene {
 		gameState.enemy1.move = this.tweens.add({
 			targets: gameState.enemy1,
 			x: 320,
+			y: 20,
 			ease: 'Back',
 			duration: 1800,
 			repeat: -1,
 			yoyo: true,
 		}); 
-
-		
+		gameState.enemy1.body.bounce.x = 1;
+		gameState.enemy1.setCollideWorldBounds(true);
 
 		  //red enemy guy
 		gameState.enemy2 = this.physics.add.sprite(280, 480, 'enemy2').setScale(.3);
@@ -81,16 +87,22 @@ class GameScene extends Phaser.Scene {
   
 		gameState.enemy2.move = this.tweens.add({
 		    targets: gameState.enemy2,
-		    x: 420,
+		    x: 50,
+			y: 40,
 		    ease: 'Linear',
 		    duration: 1800,
 		    repeat: -1,
 		    yoyo: true,
 		    //onRepeat: growSnowman
 		}); 
-		
+		gameState.enemy2.setCollideWorldBounds(true);
+
 		gameState.enemy1.anims.play('move', true);
 		gameState.enemy2.anims.play('cycle', true);
+		
+		
+		
+		
 
 		//Overlap
 		
@@ -101,6 +113,9 @@ class GameScene extends Phaser.Scene {
 				}
 			  });
 		  });
+		
+				
+	
 		
 	}
 	
@@ -129,6 +144,6 @@ class GameScene extends Phaser.Scene {
 			}
 		}
 
-		gameState.enemy1.enemyFollows;
+		
 	}
 }
