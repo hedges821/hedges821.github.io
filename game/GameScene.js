@@ -19,7 +19,9 @@ class GameScene extends Phaser.Scene {
 		
 		gameState.bkgd = this.add.image(0, 0, 'bkgd').setOrigin(0, 0);
 		
+		//wall
 		gameState.r1 = this.add.rectangle(150, 50, 10, 1000, 0x6666ff);
+		
 		
 		//player
 		gameState.player = this.physics.add.sprite(20, 20, 'hero').setScale(.15);
@@ -39,9 +41,9 @@ class GameScene extends Phaser.Scene {
 			repeat: -1
 		});
 			
-		
 		gameState.player.setCollideWorldBounds(true);
 	
+		//camera follows player
 		this.cameras.main.setBounds(0, 0, gameState.bkgd.width, 
 			gameState.bkgd.height);
 		this.physics.world.setBounds(0, 0, gameState.bkgd.width,
@@ -53,27 +55,31 @@ class GameScene extends Phaser.Scene {
 		gameState.keyA = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.A);
 		gameState.keyS = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.S);
 		gameState.keyD = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.D);
-
+	
 
 		//purple enemy guy
 		gameState.enemy1 = this.physics.add.sprite(148, 147, 'enemy1').setScale(.3);
 		this.anims.create({
 			key: 'move',
 			frames: this.anims.generateFrameNumbers('enemy1', {start: 0, end: 4}),
-			frameRate: 5,
+			frameRate: 10,
 			repeat: -1
 		});
 
+		let enemyX = 330;
+		let enemyY = 330;
+		
+
 		gameState.enemy1.move = this.tweens.add({
 			targets: gameState.enemy1,
-			x: 320,
-			y: 20,
+			x: enemyX,
+			y: enemyY,
 			ease: 'Back',
-			duration: 1800,
+			duration: 50800,
 			repeat: -1,
 			yoyo: true,
-		}); 
-		gameState.enemy1.body.bounce.x = 1;
+		});
+		gameState.enemy1.body.bounce.setTo(1, 1);
 		gameState.enemy1.setCollideWorldBounds(true);
 
 		  //red enemy guy
@@ -114,9 +120,16 @@ class GameScene extends Phaser.Scene {
 			  });
 		  });
 		
-				
-	
+
 		
+
+		  this.physics.add.overlap(gameState.player, gameState.r1, () => {
+			this.cameras.main.shake(240, .01, false, function(camera, progress) {
+				if (progress > .5) {
+				this.scene.restart(this.levelKey);
+				}
+			  });
+		  });
 	}
 	
 
