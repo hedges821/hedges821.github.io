@@ -1,21 +1,21 @@
-const gameState = {
-	score: 0
-};
-
 const config = {
 	type: Phaser.AUTO,
-	width: 640,
-	height: 480,
-	backgroundColor: "b9eaff",
+	width: 800,
+	height: 600,
 	physics: {
 		default: 'arcade',
 		arcade: {
-			enableBody: true,
-		}
+			gravity:{y:5},
+			debug: false,
+		},
 	},
-	scene: [StartScene, GameScene]
+	scene: {
+		preload: preload,
+		create: create,
+		update: update,
+	}
 
 };
 
-const game = new Phaser.Game(config);
+
 
