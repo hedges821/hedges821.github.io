@@ -17,5 +17,31 @@ const config = {
 
 };
 
+let game = new Phaser.Game(config);
+let player;
+let alien;
+let enter;
+let shot;
+let xSpeed = 0;
+let ySpeed = 0;
+let alienXSpeed = 1;
+let alienYSpeed = 1;
+const ACCEL = 8;
+let alienAccel = 4;
+let accuracy = 50;
+let score = 0;
+let scoreText = "";
+let timerText = "";
+let timer = 0;
+let interval;
+let gameover = false;
+
+function preload(){
+	this.load.image('background', 'gfx/space.png');
+	this.load.image('crosshair', 'gfx/crosshair.png');
+	this.load.spritesheet('alien', 'gfx/enemy1.png', {framWidth: 100, frameHeight: 100});
+	this.load.spritesheet('explosion', );
+}
+
 
 
