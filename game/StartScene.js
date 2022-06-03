@@ -8,6 +8,8 @@ class StartScene extends Phaser.Scene {
 		this.input.on('pointerdown', () => {
 			this.scene.stop('StartScene')
 			this.scene.start('GameScene')
+
+
 		})
 	}
 }

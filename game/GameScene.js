@@ -21,7 +21,7 @@ class GameScene extends Phaser.Scene {
 		
 		//wall
 		gameState.r1 = this.add.rectangle(150, 50, 10, 1000, 0x6666ff);
-		
+		gameState.c1 = this.add.ellipse(100, 100, 100, 100, 0x6666ff);
 		
 		//player
 		gameState.player = this.physics.add.sprite(20, 20, 'hero').setScale(.15);
