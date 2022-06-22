@@ -16,7 +16,10 @@ var config = {
     }
 };
 
+var score = 0;
+var scoreText;
 var game = new Phaser.Game(config);
+
 
 function preload ()
 {
@@ -71,11 +74,35 @@ function create ()
         repeat: -1
     });
 
-    //player collides with platforms
-    this.physics.add.collider(player, platforms);
+
 
     //adds ability to move the player
     cursors = this.input.keyboard.createCursorKeys();
+
+    //stars
+    stars = this.physics.add.group({
+        key: 'star',
+        //creates 11 more stars
+        repeat: 11,
+        //positions the 12 stars on the screen
+        setXY: { x: 12, y: 0, stepX: 70 }
+    });
+    
+    stars.children.iterate(function (child) {
+    
+        child.setBounceY(Phaser.Math.FloatBetween(0.4, 0.8));
+    });
+
+    //score
+    scoreText = this.add.text(16, 16, 'score: 0', { fontSize: '32px', fill: '#000' });
+        //player collides with platforms
+        this.physics.add.collider(player, platforms);
+    //stars collide with platform
+    this.physics.add.collider(stars, platforms);
+
+    //check if player collides with stars. if so, pass to collectStar function
+    this.physics.add.overlap(player, stars, collectStar, null, this);
+    
 }
 
 function update ()
@@ -99,4 +126,15 @@ function update ()
     {
         player.setVelocityY(-330);
     }
+
+    
+}
+
+//update score
+function collectStar (player, star)
+{
+    star.disableBody(true, true);
+
+    score += 10;
+    scoreText.setText('Score: ' + score);
 }
