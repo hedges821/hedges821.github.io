@@ -130,12 +130,20 @@ nav a:hover {
 	background-color: #fff;
 }
 
+img:hover {
+	box-shadow: 0 0 2px 1px blue;
+}
+
 
 
 /*--IDs--*/
 #container {
-	/*--background-color: #ddfad3;--*/
 	width: 85%;
+	margin: 0 auto;
+}
+
+#tvCareerContainer {
+	width: 60%;
 	margin: 0 auto;
 }
 
@@ -172,6 +180,14 @@ nav a:hover {
 	margin-left: 25px;
 	width: 25%;
 	float: right;
+	text-align: left;
+}
+
+.emmyLeft {
+	display: block;
+	width: 25%;
+	float: left;
+	margin-top: 4%;
 }
 
 .rightFloat{
