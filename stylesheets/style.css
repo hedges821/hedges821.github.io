@@ -219,30 +219,22 @@ nav a:hover {
 	//reminder: add rulesets in between the curly braces #container {
 		margin: 0 auto;
 		width: auto;
-		background-color: #fff;		
-	}
-
-	.top {
-		padding-top: 5%;
-	}
-
-	header {
-		position: relative;
-		z-index: 0;
-		width: 84%;
-		top: 0;
-	}
-
- 
-
-	body {
 		background-color: #fff;
-		background-image: none;
-		padding-top: 10%;
 	}
 
 	header {
 		width: 100%;
+	}
+
+	h2 {
+		color: black;
+		font-size: 20pt;
+		font-family: Bahnschrift, Arial;
+		text-align: center;
+		background-color: rgba(0, 0, 0, 0.35);
+		padding-bottom: 1.5%;
+		padding-left: 0;
+		border: 2px solid #F8B000;
 	}
 
 	main {
@@ -272,8 +264,26 @@ nav a:hover {
 		display: none;
 	}
 
+	.navContainer {
+		float: none;
+		margin-top: 0;
+	}
+
 	.notForMobile{
 		display: none;
+	}
+
+	#rightCol {
+		float: none;
+		position: relative;
+		text-align: left;
+		padding-left: 2%;
+		border-left: none;
+	}
+
+	#leftCol {
+		text-align: left;
+		padding-left: 2%;
 	}
 
 
