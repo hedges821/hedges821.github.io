@@ -13,54 +13,65 @@ Author Email: mike.hedges821@gmail.com
 	box-sizing: border-box;
 }
 
+@font-face{
+	font-family: Space_Mono;
+	src: url(../fonts/Space_Mono)
+}
+
+
+body {
+	font-family: "Times New Roman", serif;
+}
+
 header {
-	
+	background-color: #2319C7;
+	padding: 1px 2%;
+	z-index: 10;
+	width: 100%;
+	top: 0;
 }
 
 h1 {
-	color: black;
-	font-size: 40pt;
-	font-family: Bahnschrift, Arial;
-	text-align: center;
-	padding-top: 2%;
-	z-index: 10;
-	position: relative;
+	color: white;
+	text-shadow: 1px 1px 3px #000;
+	font-size: 275%;
 }
 
 h2 {
-	color: black;
-	font-size: 20pt;
-	font-family: Bahnschrift, Arial;
-	text-align: center;
-	background-color: rgba(0, 0, 0, 0.35);
-	padding-top: 1.5%;
-	padding-bottom: 1.5%;
-	padding-left: 25%;
-	margin-top: -2%;
-	border: 2px solid #F8B000;
+	color: white;
+	text-shadow: 1px 1px 3px #000;
+	font-size: 275%;
+	padding: 0 25%;
 }
 
 h3{
-	padding-top: 5%;
-	margin-bottom: -2%;
-	font-family: Dubai, Arial;
-	font-size: 20pt;
+	padding: 0 15%;
 }
 
-p, li{
-	font-family: Arial;
+p{
+	padding: 0 15%;
+	font-family: 'Space_Mono', monospace;
+	font-size: 18px;
+	text-indent: 50px;
 }
 
+ul{
+	padding: 0 15%;
+}
 
+figure{
+	text-align: center;
+	position: relative;
+	margin-bottom: 10%;
+}
 
 
 footer {
 	text-align: center;
 	font-size: small;
 	padding: 10px 0;
-	border: 3px groove #F8B000;
+	border: 3px groove #AAD799;
 	border-radius: 7px;
-	margin-top: 20%;
 }
 
 footer a{
@@ -117,7 +128,7 @@ nav li {
 }
 
 nav a {
-	color: #000;
+	color: #fff;
 	text-decoration: none;
 	padding: 10px;
 	font-weight: bold;
@@ -126,10 +137,9 @@ nav a {
 }
 
 nav a:hover {
-	color: #000;
+	color: darkblue;
 	background-color: #fff;
 }
-
 
 
 /*--IDs--*/
@@ -139,42 +149,48 @@ nav a:hover {
 	margin: 0 auto;
 }
 
-#rightCol {
-	float: right;
-	position: relative;
-	text-align: left;
-	width: 70%;
-	padding-left: 2%;
-	border-left: 4px groove #F8B000;
-}
-
-#leftCol{
-	text-align: right;
-	padding-right: 72%;
-	padding-top: 2%;
-}
-
 /*--Classes--*/
-.myName {
-	border: 2px solid #F8B000;
-	border-radius: 7px;
-	padding: 2% 3%;
-	background-color: rgba(235, 235, 235);
+.pHeader {
+	text-align: left;
+	color: #fff;
+	font-size: 125%;
+	margin-top: -2%;
+	margin-left: -25%;
+	text-shadow: 1px 1px 3px #000;
 }
 
-.navContainer{
-	float: right;
-	margin-top: -1.5%;
+.pHeader a:link{
+	color: #fff;
+	text-decoration: none;
+}
+
+.pHeader a:hover{
+	color: #ffd800;
+}
+
+.divJust{
+	padding-left: 25%;
+}
+
+
+.navContainer {
+	background-color: darkblue;
+}
+
+.center{
+	text-align: center;
+}
+
+.centerPic{
+	display: block;
+	margin: 0 auto;
+	width: 50%;
 }
 
 .emmyPic{
 	display: block;
 	margin-left: 25px;
 	width: 25%;
-	float: right;
-}
-
-.rightFloat{
 	float: right;
 }
 
@@ -186,13 +202,12 @@ nav a:hover {
 	float: none;
 }
 
-.removeBullet{
-	list-style-type: none;
+.moreInfo{
+	padding-bottom: 5%;
 }
 
-
 .resumeLink a{
-	color: black;
+	color: white;
 }
 
 .videoWrapper{
