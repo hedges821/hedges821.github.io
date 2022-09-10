@@ -190,6 +190,18 @@ img:hover {
 	margin-top: 7%;
 }
 
+.marginTop10{
+	margin-top: 10%;
+}
+
+.marginLeft5{
+	margin-left: 5%;
+}
+
+.marginTopMinus2{
+	margin-top: -2%;
+}
+
 .rightFloat{
 	float: right;
 }
