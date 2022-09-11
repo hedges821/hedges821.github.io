@@ -1,0 +1,64 @@
+/*Michael Hedges 
+updated 9/10/2022
+*/
+
+/*------PRINT STYLESHEET------*/
+
+
+/*
+Title of Page: The Internet of Things
+Description: The Internet of Things and Security Issues
+Author: Mike Hedges
+Author Email/URL: mhedges4@stumail.jccc.edu
+*/
+
+header {
+	color: #000;
+}
+
+
+nav {
+	display: none;
+}
+
+nav ul{
+	display: none;
+}
+
+main {
+	background-color: #fff;
+}
+
+#iotCloud, #communicationImage, #codeImage, #keyboardImage, #emailImage, #smartHome, #iotComm, #cyberSecurity {
+	display: none;
+}
+
+ul, ol {
+	line-height: 135%;
+	margin-left: 5%;
+}
+
+img {
+	display: none;
+}
+
+a:link{
+	text-decoration: none;
+	color: black;
+}
+
+ol[type="A"] {
+	margin-left: 10%;
+}
+
+.margin10 {
+	margin-left: 10%;
+}
+
+.noPrint{
+	display: none;
+}
+
+.videoWrapper{
+	display: none;
+}
