@@ -243,7 +243,8 @@ img:hover {
 
 /*--Smartphone Display--*/
 @media only screen and (max-width: 37.5em) {
-	//reminder: add rulesets in between the curly braces #container {
+	/*reminder: add rulesets in between the curly braces*/
+	#container {
 		margin: 0 auto;
 		width: auto;
 		background-color: #fff;
