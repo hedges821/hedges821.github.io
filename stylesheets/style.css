@@ -159,6 +159,11 @@ tr:nth-of-type(even) {
 	margin: 0 auto;
 }
 
+#educationContainer{
+	width: 60%;
+	margin: 0 auto;
+}
+
 #rightCol {
 	float: right;
 	position: relative;
