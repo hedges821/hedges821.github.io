@@ -74,12 +74,7 @@ footer a:active{
 footer a:visited{
 	color: green;
 }
-/*
-nav{
-	padding: .25% 0;
-	clear: both;
-}
-	*/
+
 nav ul {
 	list-style-type: none;
 	text-align: center;
@@ -87,7 +82,6 @@ nav ul {
 	margin: 10px;
 	padding: 5px;
 }
-
 
 p a:hover, .contactInfo li a:hover, .resumeLink a:hover {
 	color: cadetblue;
@@ -128,6 +122,28 @@ nav a:hover {
 
 img:hover {
 	box-shadow: 0 0 2px 1px blue;
+}
+
+/*--Table--*/
+table {
+	border: 2px solid #F8B000;
+	margin-top: 1.5%;
+	text-align: center;
+	font-size: 1.25em;
+}
+
+thead, tfoot {
+	font-weight: bold;
+	background-color: #999;
+}
+
+td, th {
+	border: 1px solid #aad799;
+	padding: 9px;
+}
+
+tr:nth-of-type(even) {
+	background-color: rgba(235, 235, 235);
 }
 
 
