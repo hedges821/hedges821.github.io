@@ -263,7 +263,7 @@ tr:nth-of-type(even) {
 @media only screen and (max-width: 37.5em) {
 	/*reminder: add rulesets in between the curly braces*/
 	#container {
-		margin: 0 auto;
+		margin: auto;
 		width: auto;
 		background-color: #fff;
 	}
@@ -316,7 +316,11 @@ tr:nth-of-type(even) {
 	}
 
 	ul li{
-		margin-left: -3%;
+		margin-left: 3%;
+	}
+
+	table{
+		text-align: left;
 	}
 
 	.myName {
@@ -360,6 +364,12 @@ tr:nth-of-type(even) {
 		padding-right: 2%;
 		padding-top: 0;
 	}
+
+	#educationContainer{
+		width: 100%;
+		margin: auto;
+	}
+
 
 
 	
@@ -423,7 +433,7 @@ tr:nth-of-type(even) {
 	}
 
 	ul li {
-		margin-left: 0;
+		margin-left: -7%;
 	}
 
 	.myName {
