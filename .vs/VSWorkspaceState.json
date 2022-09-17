@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
     "",
+    "\\game",
+    "\\pages",
     "\\stylesheets"
   ],
+  "SelectedNode": "\\game\\gameIndex.html",
   "PreviewInSolutionExplorer": false
 }

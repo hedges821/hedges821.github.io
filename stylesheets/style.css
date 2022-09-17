@@ -295,11 +295,7 @@ img:hover {
 	}
 
 	ul li{
-		margin-left: -7%;
-	}
-
-	iframe {
-		display: none;
+		margin-left: -3%;
 	}
 
 	.myName {
@@ -321,8 +317,6 @@ img:hover {
 	.noVideo{
 		display: none;
 	}
-
-
 
 	#leftCol {
 		text-align: left;
@@ -356,7 +350,7 @@ img:hover {
 
 	#container {
 		margin: 0 auto;
-		width: auto;
+		width: 90%;
 		background-color: #fff;
 	}
 
@@ -408,11 +402,7 @@ img:hover {
 	}
 
 	ul li {
-		margin-left: 2%;
-	}
-
-	iframe {
-		display: none;
+		margin-left: 0;
 	}
 
 	.myName {
@@ -455,4 +445,10 @@ img:hover {
 	}
 
 	/*Media queries require a closing brace*/
+}
+
+@media only screen and (max-width: 1040px) {
+	.noGame{
+		display: none;
+	}
 }
