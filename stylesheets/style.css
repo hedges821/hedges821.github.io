@@ -208,6 +208,11 @@ tr:nth-of-type(even) {
 	margin-top: 7%;
 }
 
+.certifications {
+	display: block;
+	margin-right: -5%;
+}
+
 .marginTop10{
 	margin-top: 10%;
 }
