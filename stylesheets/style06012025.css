@@ -1,0 +1,73 @@
+/*Mike Hedges resume and portfolio website
+updated 6/1/2025*/
+
+/*
+Title of Page: Mike Hedges' Portfolio
+Description: A website to showcase my frontend skills
+Author: Mike Hedges
+Author Email: mike.hedges821@gmail.com
+*/
+
+*{
+	box-sizing: border-box;
+}
+
+header{
+	text-align: center;
+	line-height: 100%;
+}
+
+h1 {
+	color: black;
+	font-size: 45pt;
+	font-family: Bahnschrift, Arial;	
+	padding-top: 2%;
+	z-index: 10;
+	position: relative;
+}
+
+h2{
+	border-top: -20%;
+}
+
+h4{
+	line-height: 5%;
+}
+
+ul{
+	padding-bottom: 2%;
+	margin-left: 5%;
+}
+
+p{
+	margin-left: 5%;
+}
+
+
+
+footer{
+	text-align: center;
+	margin-top: 5%;
+	margin-bottom: 5%;
+}
+
+
+
+/*--IDs--*/
+#container {
+	width: 80%;
+	margin: 2% 5%;
+}
+
+#networkMarginTop{
+	margin-top: 3.25%;
+}
+
+
+
+/*--Classes--*/
+
+.certContainer{
+	display: flex;
+}
+
