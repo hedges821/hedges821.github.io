@@ -26,9 +26,6 @@ h1 {
 	position: relative;
 }
 
-h2{
-	border-top: -20%;
-}
 
 h4{
 	line-height: 5%;
@@ -71,3 +68,48 @@ footer{
 	display: flex;
 }
 
+
+
+
+/*--Smartphone Display--*/
+@media only screen and (max-width: 37.5em) {
+	/*reminder: add rulesets in between the curly braces*/
+
+
+header{
+	text-wrap: balance;
+	line-height: 275%;
+}
+
+footer{
+	text-align: left;
+}
+
+.certContainer{
+	display: none;
+}
+
+
+
+
+	
+/*Media queries require a closing brace*/
+/*This is the closing curly brace for smartphone display*/	
+}
+
+/*--Tablet Display--*/
+@media only screen and (max-width: 64em) {
+
+#networkMarginTop{
+	margin-top: 5%	
+}
+
+	/*Media queries require a closing brace*/
+	/*This is the closing brace for Tablet Display*/
+}
+
+@media only screen and (max-width: 1040px) {
+	.noGame{
+		display: none;
+	}
+}
