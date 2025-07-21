@@ -48,6 +48,48 @@ footer{
 	margin-bottom: 5%;
 }
 
+nav li {
+	display: inline;
+}
+nav ul {
+	list-style-type: none;
+	text-align: center;
+	font-size: 1.5em;
+	margin: 10px;
+	padding: 5px;
+}
+
+p a:hover, .contactInfo li a:hover, .resumeLink a:hover {
+	color: cadetblue;
+}
+
+p a:active, .contactInfo li a:active, .resumeLink a:active{
+	color: yellow;
+}
+
+nav li {
+	display: inline;
+}
+
+nav a {
+	color: #000;
+	text-decoration: none;
+	padding: 10px;
+	font-weight: bold;
+	border-left: 1px solid #091d02;
+	border-right: 1px solid #091d02;
+}
+
+nav a:hover {
+	color: #1c0fcee8;
+	background-color: #f1eebf;
+}
+
+img:hover {
+	box-shadow: 0 0 2px 1px blue;
+}
+
+
 
 
 /*--IDs--*/
@@ -57,7 +99,7 @@ footer{
 }
 
 #networkMarginTop{
-	margin-top: 3.25%;
+	margin-top: 2.15%;
 }
 
 
@@ -68,7 +110,11 @@ footer{
 	display: flex;
 }
 
-
+.navContainer{
+	float: right;
+	margin-top: -85px;
+	font-size: 72%;
+}
 
 
 /*--Smartphone Display--*/
@@ -89,7 +135,9 @@ footer{
 	display: none;
 }
 
-
+.navContainer{
+	display: none;
+}
 
 
 	
@@ -112,4 +160,8 @@ footer{
 	.noGame{
 		display: none;
 	}
+
+	.navContainer{
+	display: none;
+}
 }
